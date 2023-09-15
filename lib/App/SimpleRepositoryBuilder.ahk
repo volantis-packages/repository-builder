@@ -1,0 +1,3 @@
+class SimpleRepositoryBuilder extends RepositoryBuilderBase {
+
+}

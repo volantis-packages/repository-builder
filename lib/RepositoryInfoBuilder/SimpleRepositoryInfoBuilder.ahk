@@ -1,0 +1,3 @@
+class SimpleRepositoryInfoBuilder extends RepositoryInfoBuilderBase {
+
+}

@@ -1,0 +1,25 @@
+{
+    "name": "volantis/repository-builder",
+    "type": "package",
+    "description": "A package for defining and managing packages",
+    "website": "https://volantis.dev",
+    "authors": [{
+        "name": "Ben McClure",
+        "email": "ben@volantisdev.com"
+    }],
+    "require": {
+        "volantis/app": "^1.0 || dev-main",
+        "volantis/package": "^1.0 || dev-main"
+    },
+    "libraries": {
+        "RepositoryBuilder": "lib"
+    },
+    "commands": {
+        "BuildRepository": {
+            "script": "cmd/BuildRepository.ahk",
+            "includes": [
+                "*"
+            ]
+        }
+    }
+}
