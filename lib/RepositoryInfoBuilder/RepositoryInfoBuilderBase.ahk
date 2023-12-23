@@ -19,16 +19,14 @@ class RepositoryInfoBuilderBase {
         }
 
         repositoryData := Map()
-
-        writerType := this._config["package_info_writer_type"]
+        writerType := this._config.Has("package_info_writer_type") ? this._config["package_info_writer_type"] : "json"
 
         if (!this._container.Has("package_info_writer." . writerType)) {
             throw DataException("Unknown package info writer type: " . writerType)
         }
 
         DirDelete(this._config["build_dir"], true)
-        DirCreate(this._config["build_dir"])
-        DirCreate(this._config["build_dir"] . "/packages")
+        DirCreate(this._config["build_dir"] . "\packages")
 
         for , packageInfo in packages {
             if (Type(packageInfo) == "String") {
